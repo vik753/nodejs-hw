@@ -25,5 +25,12 @@
     "globals": "^17.4.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pino-http": "^11.0.0",
+    "pino-pretty": "^13.1.3"
   }
 }
