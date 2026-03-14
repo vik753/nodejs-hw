@@ -1,3 +1,7 @@
+.vscode
+.DS_Store
+.idea
+
 # Logs
 logs
 *.log
@@ -91,9 +95,8 @@ dist
 # vuepress build output
 .vuepress/dist
 
-# vuepress v2.x temp and cache directory
+# vuepress v2.x temp
 .temp
-.cache
 
 # Sveltekit cache directory
 .svelte-kit/
