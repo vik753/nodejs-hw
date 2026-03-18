@@ -37,4 +37,9 @@ const notesSchema = new Schema(
   },
 );
 
+notesSchema.index(
+  { title: 'text', content: 'text' },
+  { weights: { title: 10, content: 5 } },
+);
+
 export const Note = model('Note', notesSchema);
