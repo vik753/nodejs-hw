@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose';
 import { TAGS } from '../constants/tags.js';
 
-const notesSchema = new Schema(
+const noteSchema = new Schema(
   {
     title: {
       type: String,
@@ -20,6 +20,11 @@ const notesSchema = new Schema(
       default: 'Todo',
       enum: TAGS,
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
   {
     timestamps: true,
@@ -27,9 +32,9 @@ const notesSchema = new Schema(
   },
 );
 
-notesSchema.index(
+noteSchema.index(
   { title: 'text', content: 'text' },
   { weights: { title: 10, content: 5 } },
 );
 
-export const Note = model('Note', notesSchema);
+export const Note = model('Note', noteSchema);
